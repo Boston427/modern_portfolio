@@ -46,7 +46,7 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url(../img/portrait.jpg) center center/cover;
+      background: url(../img/me.jpg) center center/cover;
       width: 140px;
       height: 140px;
     }
@@ -83,7 +83,7 @@
       grid-template-columns: 1fr;
     }
   }
-  div.email {
+  .boxes div {
     font-size: 1.5rem;
   }
 }
