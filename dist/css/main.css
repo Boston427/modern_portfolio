@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #354340;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #40514e;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -55,16 +55,16 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg) center center/cover;
+      background: url(../img/me.jpg) center;
       border-radius: 50%;
-      border: 3px solid #eece1a; }
+      border: 3px solid #3294a6; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #3294a6; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #3294a6; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -94,14 +94,14 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #40514e;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: linear-gradient(rgba(68, 68, 68, 0.9), rgba(68, 68, 68, 0.9)), url(../img/computerbg.jpg);
+    background: linear-gradient(rgba(50, 146, 166, 0.9), rgba(50, 146, 166, 0.9)), url(../img/computerbg.jpg);
     background-attachment: fixed;
     background-size: cover; }
 
@@ -109,17 +109,21 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 300; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
     font-size: 6rem; }
+    h1.lg-heading .text-heading,
+    h2.lg-heading .text-heading,
+    h3.lg-heading .text-heading {
+      color: #40514e; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(69, 87, 83, 0.5); }
 
 a {
   color: #fff;
@@ -131,7 +135,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #3294a6; }
 
 main {
   padding: 4rem;
@@ -141,7 +145,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #40514e;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -161,7 +165,7 @@ img.bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: #3294a6 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -172,9 +176,9 @@ img.bio-image {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #4b5f5c;
     padding: 0.5rem;
-    border-bottom: #eece1a 3px solid; }
+    border-bottom: #3294a6 3px solid; }
 
 .projects {
   display: grid;
@@ -185,8 +189,28 @@ img.bio-image {
     border: 3px solid #fff; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #3294a6;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px solid #3294a6;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #3294a6;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -194,7 +218,7 @@ img.bio-image {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #3294a6;
     color: #000; }
 
 .btn-dark {
@@ -202,13 +226,13 @@ img.bio-image {
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #c2cecc;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #293533;
   color: #fff;
   height: 60px; }
 
@@ -253,7 +277,14 @@ img.bio-image {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
-  .projects {
-    grid-template-columns: 1fr; } }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+    main .projects {
+      grid-template-columns: 1fr; }
+  div.email {
+    font-size: 1.5rem; } }
